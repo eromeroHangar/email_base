@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Automate emails
+    style
+      :clean-css
+        body{
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          text-align: center;
+        }
+        section {
+          min-width: 600px;
+          width: 960px;
+          margin: 0 auto;
+        }
+        ul {
+          display: inline-block;
+          text-align: left;
+        }
+  body
+    h1 List of emails
+    p To create new project enter in CLI: gulp boilerplate --name "Projectname"
+    section(class="hide")
+      ul
+        each val in links
+          li
+            a(href=val)=val
