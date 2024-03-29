@@ -1,0 +1,39 @@
+table(width=max_w align="center" class="mobile-table")&attributes(tableAtt)
+  tr
+    td
+      table(width="100%" bgcolor="#ffffff")&attributes(tableAtt)
+        tr
+          +hSpacer(35)
+          td
+            table(width="100%")&attributes(tableAtt)
+              tr
+                td
+                  table(width="100%")&attributes(tableAtt)
+                    +vSpacer(35)
+                    tr
+                      td&attributes(tdCenter)
+                        +addImg("hero-image-feedback.png", "alt text")(width="120" height="96")
+                    +vSpacer(15)
+                    tr
+                      td&attributes(tdCenter)(style="font-size: 30px; line-height: 36px; color: #333333; margin: 0;").f_bold #{content.title}
+                    +vSpacer(16)
+                    each val in comments
+                      tr
+                        td&attributes(tdCenter).f_normal(style="font-size: 16px; line-height: 24px; color: #777777;")=val
+                      +vSpacer(5)
+                    +vSpacer(32)
+                    +dividerLine(3, "#eeeeee")
+                    +vSpacer(35)
+                    tr
+                      td&attributes(tdCenter)
+                        +button({width:190, height:56, bgcolor:'#ed8e20', bordercolor:'#ed8e20', radius:5, font_family:`${fallback}`, font_size:'18', font_weight:'400', link: 'https://google.com', text: 'Offer Feedback'})
+                    +vSpacer(15)
+                    +dividerLine(2, "#333333")
+                    +vSpacer(18)
+                    tr
+                      td&attributes(tdCenter).f_bold(style="font-size: 18px; line-height: 24px;color: #333333;") Thank you, for trying it#[sup 1,5]
+                    +vSpacer(18)
+                    tr
+                      td&attributes(tdCenter)(style="font-size: 16px; line-height: 24px; color: #777777;").
+                        #{comments[1]}
+          +hSpacer(35)
